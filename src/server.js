@@ -21,8 +21,13 @@ app.get('/', (req, res) => {
 const authRoutes = require('./routes/authRoutes');
 app.use('/api/auth', authRoutes);
 
-// TODO: Mount property routes
-// TODO: Mount booking routes
+// Mount property routes
+const propertyRoutes = require('./routes/propertyRoutes');
+app.use('/api/properties', propertyRoutes);
+
+// Mount booking routes
+const bookingRoutes = require('./routes/bookingRoutes');
+app.use('/api/bookings', bookingRoutes);
 
 // TODO: Global error handler
 
